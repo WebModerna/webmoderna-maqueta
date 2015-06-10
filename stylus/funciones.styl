@@ -1,0 +1,116 @@
+/* Funciones Comunes a todos/as */
+background-size()
+	background-size arguments
+	-o-background-size arguments
+	-ms-background-size arguments
+	-moz-background-size arguments
+	-webkit-background-size arguments
+border-radius()
+	border-radius arguments
+	-o-border-radius arguments
+	-moz-border-radius arguments
+	-webkit-border-radius arguments
+box-shadow()
+	box-shadow arguments
+	-o-box-shadow arguments
+	-ms-box-shadow arguments
+	-moz-box-shadow arguments
+	-webkit-box-shadow arguments
+box-sizing()
+	box-sizing border-box
+	-o-box-sizing border-box
+	-ms-box-sizing border-box
+	-moz-box-sizing border-box
+	-webkit-box-sizing border-box
+
+box-shadow_lindo()
+	box-shadow 0px 1px 1px 0px blanco_transparente inset, 0px -15px 15px 0px rgba(0,0,0,0.25) inset
+	-o-box-shadow 0px 1px 1px 0px blanco_transparente inset, 0px -15px 15px 0px rgba(0,0,0,0.25) inset
+	-ms-box-shadow 0px 1px 1px 0px blanco_transparente inset, 0px -15px 15px 0px rgba(0,0,0,0.25) inset
+	-moz-box-shadow 0px 1px 1px 0px blanco_transparente inset, 0px -15px 15px 0px rgba(0,0,0,0.25) inset
+	-webkit-box-shadow 0px 1px 1px 0px blanco_transparente inset, 0px -15px 15px 0px rgba(0,0,0,0.25) inset
+
+box-shadow_texto()
+	box-shadow 0px -1px 0px negro_re_transparente
+	-o-box-shadow 0px -1px 0px negro_re_transparente
+	-ms-box-shadow 0px -1px 0px negro_re_transparente
+	-moz-box-shadow 0px -1px 0px negro_re_transparente
+	-webkit-box-shadow 0px -1px 0px negro_re_transparente
+column-count()
+	column-count arguments
+	-o-column-count arguments
+	-ms-column-count arguments
+	-moz-column-count arguments
+	-webkit-column-count arguments
+column-gap()
+	column-gap arguments
+	-o-column-gap arguments
+	-ms-column-gap arguments
+	-moz-column-gap arguments
+	-webkit-column-gap arguments
+column-rule()
+	column-rule arguments
+	-o-column-rule arguments
+	-ms-column-rule arguments
+	-moz-column-rule arguments
+	-webkit-column-rule arguments
+delay()
+	animation-delay arguments
+	-o-animation-delay arguments
+	-ms-animation-delay arguments
+	-moz-animation-delay arguments
+	-webkit-animation-delay arguments
+perspective()
+	perspective arguments
+	-o-perspective arguments
+	-ms-perspective arguments
+	-moz-perspective arguments
+	-webkit-perspective arguments
+/* Una función que crea opacidad y soporte para IE8 */
+opacity(n)
+	opacity n
+	if support-for-ie
+		filter unquote('alpha(Opacity=' + round(n * 100) + ')')
+		filter unquote('progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(n * 100) + ')')
+		/*-ms-filter unquote('progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(n * 100) + ')')*/
+
+/* Animaciones - Definición de los keyframes. Solo una prueba */
+/*$keyframe-name = pulse
+@keyframes foo {$keyframe-name}
+	for i in 0..10
+		{10% * i}
+			width (i/10)*/
+
+@keyframes rotador
+	0%
+		transform(rotateZ(0deg))
+	50%
+		transform(rotateZ(180deg))
+	100%
+		transform(rotateZ(360deg))
+
+
+text-shadow()
+	text-shadow arguments
+	-o-text-shadow arguments
+	-ms-text-shadow arguments
+	-moz-text-shadow arguments
+	-webkit-text-shadow arguments
+text-shadow_lindo()
+	text-shadow 0px -1px 0px negro_re_transparente
+	-o-text-shadow 0px -1px 0px negro_re_transparente
+	-ms-text-shadow 0px -1px 0px negro_re_transparente
+	-moz-text-shadow 0px -1px 0px negro_re_transparente
+	-webkit-text-shadow 0px -1px 0px negro_re_transparente
+transform()
+	transform arguments
+	-o-transform arguments
+	-ms-transform arguments
+	-moz-transform arguments
+	-webkit-transform arguments
+transition()
+	transition arguments
+	-o-transition arguments
+	-ms-transition arguments
+	-moz-transition arguments
+	-webkit-transition arguments

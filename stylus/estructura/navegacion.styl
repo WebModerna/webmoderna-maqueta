@@ -1,0 +1,150 @@
+.active
+.current_menu_item
+.current-page-item
+	background gris_suave
+
+.navegacion__barra
+	height 0
+	margin 0
+	opacity 0
+	padding 0
+	position relative
+	transition(all 0.5s ease-in-out)
+	visibility hidden
+	
+	li
+		margin 1px 0 0 0
+		overflow hidden
+		transition(all 0.3s ease-in-out)
+		width 100%
+		a
+			border-top 1px solid gris_suave
+			color blanco
+			display block
+			font-family 'MankSansMedium'
+			font-size 1.5em
+			padding 0.4em 0.8em
+			overflow hidden
+			position relative
+			text-align center
+			text-decoration none
+			transition(all 0.3s ease-in-out)
+			z-index 3
+			&:after
+				background naranja
+				content ""
+				display block
+				height 10%
+				position absolute
+				right 0
+				top 0
+				transition(all 0.3s ease-in-out)
+				width 0
+				z-index 2
+			&:before
+				background naranja
+				content ""
+				display block
+				height 10%
+				position absolute
+				left 0
+				bottom 0
+				transition(all 0.3s ease-in-out)
+				width 0
+				z-index 2
+				
+			&:hover
+				&:after
+					transform(rotate(90deg))
+					width 20px
+				&:before
+					transform(rotate(-90deg))
+					width 20px			
+		
+		&:first-child
+			a
+				border-top none
+
+		&:hover
+		&:focus
+			background rojo_google
+			color rgba(blanco, 1)
+			text-shadow_lindo()
+		
+
+.navegacion__barra--abrir
+	height auto
+	opacity 1
+	visibility visible
+
+.navegacion__barra--cerrar
+	height 0
+	opacity 0
+	visibility hidden
+	
+.navegacion__menu
+	display inline-block
+	position absolute
+	right 0
+	top 0
+	z-index 2
+	
+	a
+		box-sizing()
+		display block
+		overflow hidden
+		padding 1.25em
+		text-decoration none
+		transition(all 0.5s ease-in-out)
+		&:active
+			color rosa_suave
+		&:before
+			border-top 1em double gris_suave
+			border-bottom 0.35em solid gris_suave
+			content ""
+			height 0.4em
+			left 0
+			position absolute
+			transition(all 0.5s ease-in-out)
+			top 0.8em
+			width 2em
+			&:hover
+				border-color blanco
+
+.navegacion__menu--rotar
+	a
+		&:before
+			border-color rosa_suave
+			transform(rotate(90deg))
+
+
+@media all and (min-width: 960px)
+	.navegacion__barra
+		display inline-block
+		height auto
+		opacity 1
+		padding 0
+		position absolute
+		right 0
+		top 0
+		visibility visible
+		li
+			display table-cell
+			margin 0
+			&:hover
+			&:focus
+				background none
+			a
+				border-top none
+				&:hover
+				&:focus
+					&:after
+					&:before
+						transform(rotate(0deg))
+						width 100%
+						z-index -1
+					
+			
+	.navegacion__menu
+		display none
+		

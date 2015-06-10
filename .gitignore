@@ -1,2 +1,29 @@
-.sass-cache
-*.css.map
+# Carpetas -------------
+blue
+diseño web
+frameworks
+imagenes*
+images
+Jssor*
+nuevos logos
+test
+helpers
+lib
+demo*
+source
+iconic
+jquery.bxslider
+lightbox
+
+# Archivos -------------
+*.txt
+*.log
+*.html
+*.htm
+*.zip
+*.json
+*.db
+.htaccess
+sitemap.xml
+sitemap.xml.gz
+style.min.css

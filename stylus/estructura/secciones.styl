@@ -1,0 +1,73 @@
+.seccion__grilla
+	text-align center
+	
+.seccion__grilla[data-seccion="1"]
+	background url('../img/slider-img2.jpg') top left no-repeat fixed
+	background-size(cover)
+	height 100vh
+	
+.seccion__grilla__header
+	background gris_fuerte
+	overflow hidden
+	padding 1em 0.5em
+
+.seccion__grilla__titulo
+	color blanco
+	font-size 2em
+	font-weight lighter
+	margin 0
+	position relative
+	text-shadow_lindo()
+	text-align left
+	&::before
+		border-bottom solid 5px gris_suave
+		bottom -0.5rem
+		content ""
+		left 0
+		position absolute
+		width 3em
+
+.seccion__grilla__item
+	margin 0.5rem 0
+	padding 1rem
+
+.seccion__grilla__item__icono
+	font-size 500%
+	color verde_azulado
+	
+.seccion__grilla__item__resumen
+	color negro_transparente
+	font-family 'MankSansMedium'
+	font-size 1.2em
+	padding 0.5em
+	text-align left
+
+*
+	padding 0
+	margin 0
+
+.seccion__grilla__item__titulo
+	a
+		border-bottom 1px solid rgba(gris_suave, 0.5)
+		display block
+		font-size 1.2em
+		padding 0.3em
+		&:hover
+		&:focus
+			color rosa_suave
+
+		color gris_suave
+		text-decoration none
+		span
+			color verde_azulado
+			
+
+@media all and (min-width: 760px)
+	.seccion__grilla__item
+		display inline-block
+		max-width 40%
+		vertical-align top
+		
+@media all and (min-width: 960px)
+	.seccion__grilla__item
+		max-width 22%
