@@ -1,150 +1,78 @@
-.active
-.current_menu_item
-.current-page-item
-	background gris_suave
-
+// Estilos de la barra de navegación principal
 .navegacion__barra
-	height 0
+	display none
 	margin 0
-	opacity 0
 	padding 0
-	position relative
-	transition(all 0.5s ease-in-out)
-	visibility hidden
 	
 	li
-		margin 1px 0 0 0
-		overflow hidden
-		transition(all 0.3s ease-in-out)
-		width 100%
+		border-top 1px solid gris_suave
 		a
-			border-top 1px solid gris_suave
-			color blanco
+			color gris_suave
 			display block
 			font-family 'MankSansMedium'
-			font-size 1.5em
-			padding 0.4em 0.8em
-			overflow hidden
+			font-weight bolder
+			padding 0.5em 1em
 			position relative
-			text-align center
 			text-decoration none
+			text-transform uppercase
+			text-shadow_lindo()
 			transition(all 0.3s ease-in-out)
-			z-index 3
+			z-index 2
 			&:after
-				background naranja
+				background naranja_suave
 				content ""
-				display block
-				height 10%
+				height 100%
 				position absolute
 				right 0
 				top 0
 				transition(all 0.3s ease-in-out)
 				width 0
-				z-index 2
-			&:before
-				background naranja
-				content ""
-				display block
-				height 10%
-				position absolute
-				left 0
-				bottom 0
-				transition(all 0.3s ease-in-out)
-				width 0
-				z-index 2
-				
+				z-index -1
 			&:hover
+			&:focus
+				color blanco
 				&:after
-					transform(rotate(90deg))
-					width 20px
-				&:before
-					transform(rotate(-90deg))
-					width 20px			
-		
+					width 100%
+					
 		&:first-child
-			a
-				border-top none
-
-		&:hover
-		&:focus
-			background rojo_google
-			color rgba(blanco, 1)
-			text-shadow_lindo()
-		
-
-.navegacion__barra--abrir
-	height auto
-	opacity 1
-	visibility visible
-
-.navegacion__barra--cerrar
-	height 0
-	opacity 0
-	visibility hidden
+			border-top none
+			
 	
-.navegacion__menu
+// Estilos para el botón del menú
+.boton__menu
 	display inline-block
 	position absolute
 	right 0
 	top 0
-	z-index 2
-	
 	a
-		box-sizing()
+		color gris_suave
 		display block
-		overflow hidden
-		padding 1.25em
+		font-size 2em
+		padding 0.2em
 		text-decoration none
-		transition(all 0.5s ease-in-out)
-		&:active
-			color rosa_suave
-		&:before
-			border-top 1em double gris_suave
-			border-bottom 0.35em solid gris_suave
-			content ""
-			height 0.4em
-			left 0
-			position absolute
-			transition(all 0.5s ease-in-out)
-			top 0.8em
-			width 2em
-			&:hover
-				border-color blanco
+		&:hover
+			color blanco
+			
 
-.navegacion__menu--rotar
+.boton__menu--rotar
 	a
-		&:before
-			border-color rosa_suave
-			transform(rotate(90deg))
-
-
-@media all and (min-width: 960px)
-	.navegacion__barra
-		display inline-block
-		height auto
-		opacity 1
-		padding 0
+		color rosa_suave
+		transform(rotate(90deg))
+		&:hover
+			color rosa_suave
+			
+@media all and (min-width:960px)
+	.boton__menu
+		display none
+	
+	.navegacion
+		display table-cell
 		position absolute
 		right 0
 		top 0
-		visibility visible
-		li
-			display table-cell
-			margin 0
-			&:hover
-			&:focus
-				background none
-			a
-				border-top none
-				&:hover
-				&:focus
-					&:after
-					&:before
-						transform(rotate(0deg))
-						width 100%
-						z-index -1
-					
-			
-	.navegacion__menu
-		display none
 		
+	.navegacion__barra
+		display block
+		li
+			border-top none
+			display inline-block

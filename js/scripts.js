@@ -340,9 +340,7 @@
 	$(document).on("ready", inicio);
 	function inicio()
 	{   
-		$('#menu').on("click", transicion_abrir);
-		var altura = $('#header_nav').offset().top;
-		console.log(altura);
+		// $('#menu').on("click", transicion_abrir);
 	};
 	function transicion_abrir(ev)
 	{   
@@ -353,14 +351,15 @@
 			opacity: 1
 		};*/
 
-		$('#header_nav').addClass('navegacion__barra--abrir');
+		// $('#header_nav').addClass('navegacion__barra--abrir');
 		// $('#header_nav').css(abrir);
-		$('#header_nav').removeClass('navegacion__barra--cerrar');
-		$('#menu').addClass('navegacion__menu--rotar');
-		$('#menu').off("click", transicion_abrir);
+		// $('#header_nav').removeClass('navegacion__barra--cerrar');
+		$('#header_nav').slideToggle('slow').$('#menu');
+		// $('#menu').addClass('boton__menu--rotar');
+		// $('#menu').off("click", transicion_abrir);
 		
 		/*cerrando el menú*/
-		$('#menu').on("click", transicion_cerrar);
+		// $('#menu').on("click", transicion_cerrar);
 		
 		function transicion_cerrar(ev)
 		{
@@ -370,25 +369,25 @@
 				height: 0,
 				opacity: 0
 			};*/
-			$('#header_nav').addClass('navegacion__barra--cerrar');
-			$('#header_nav').removeClass('navegacion__barra--abrir');
-			$('#menu').removeClass('navegacion__menu--rotar');
+			// $('#header_nav').addClass('navegacion__barra--cerrar');
+			// $('#header_nav').removeClass('navegacion__barra--abrir');
+			// $('#menu').removeClass('boton__menu--rotar');
 			//Para asegurarse el menú abierto o cerrado cuando se redimensione la pantalla
-			$(window).resize(redimensionador);
-			function redimensionador()
-			{
-				var ancho = $(window).width();
-				if (ancho >= 700)
-				{
-					$('#header_nav').addClass('navegacion__barra--abrir');
-					$('#header_nav').removeClass('cerrar');
-				} else {
-					$('#header_nav').addClass('navegacion__barra--cerrar');
-					$('#header_nav').removeClass('navegacion__barra--abrir')
-				};
-			};
-			$('#menu').off("click", transicion_cerrar);
-			$('#menu').on("click", transicion_abrir);
+			// $(window).resize(redimensionador);
+			// function redimensionador()
+			// {
+			// 	var ancho = $(window).width();
+			// 	if (ancho >= 700)
+			// 	{
+			// 		$('#header_nav').addClass('navegacion__barra--abrir');
+			// 		$('#header_nav').removeClass('cerrar');
+			// 	} else {
+			// 		$('#header_nav').addClass('navegacion__barra--cerrar');
+			// 		$('#header_nav').removeClass('navegacion__barra--abrir')
+			// 	};
+			// };
+			// $('#menu').off("click", transicion_cerrar);
+			// $('#menu').on("click", transicion_abrir);
 		};
 	};
 }());

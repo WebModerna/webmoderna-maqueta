@@ -81,13 +81,19 @@ opacity(n)
 		{10% * i}
 			width (i/10)*/
 
-@keyframes rotador
+@keyframes rotador360deg
 	0%
 		transform(rotateZ(0deg))
 	50%
 		transform(rotateZ(180deg))
 	100%
 		transform(rotateZ(360deg))
+		
+@keyframes rotador180deg
+	0%
+		transform( rotate(0deg) )
+	100%
+		transform( rotate(180deg) )
 
 
 text-shadow()

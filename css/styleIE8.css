@@ -1,0 +1,21 @@
+.boton__menu
+{
+	display: none;
+}
+.navegacion
+{
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.navegacion__barra
+{
+	display: block;
+}
+.navegacion__barra li
+{
+	display: inline-block;
+	border-top: none;
+}
+.navegacion__barra
