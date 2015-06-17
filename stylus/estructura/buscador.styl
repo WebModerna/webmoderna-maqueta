@@ -1,0 +1,92 @@
+.boton__buscar
+	box-sizing()
+	display inline-block
+	position absolute
+	right 3.3em
+	top 0.3em
+	a
+		border-radius 0.2em
+		color gris_suave
+		display block
+		font-size 2em
+		padding 0
+		// padding 0.2em
+		text-decoration none
+		text-shadow_lindo()
+		img
+			display block
+			width 45px
+		&:hover
+			color blanco
+
+.boton__buscar--abierto
+	a
+		background rosa_suave
+		transform rotate(90deg)
+
+.busqueda
+	border-radius(1em)
+	background gris_fuerte
+	// display none
+	height 0
+	margin 0.3em 1em
+	opacity 0
+	position absolute
+	right 0
+	text-align right
+	visibility hidden
+	z-index 9999 !important
+	
+.busqueda--abierta
+	height auto
+	opacity 1
+	visibility visible
+	
+.busqueda__formulario
+	border-radius(1em)
+	border 1px solid gris_suave
+	display table
+	max-width 230px
+	overflow hidden
+	padding 0
+	&:focus
+	&:hover
+		box-shadow(0px 0px 5px 1px naranja)
+	input[type="search"]
+	input[type="text"]
+		border none
+		background none
+		color gris_suave
+		display inline
+		// font-size 1.2em
+		font-family 'MankSansOblique'
+		max-width 150px
+		padding 0.1em 0.5em
+		vertical-align middle
+	[type="submit"]
+		border none
+		border-left 1px solid gris_suave
+		border-radius 0 1em 1em 0
+		background none
+		color gris_suave
+		display inline
+		padding 0.2em
+		vertical-align middle
+		img
+			width 20px
+		&:hover
+		&:focus
+			background rosa_suave
+			color blanco
+	
+@media all and (min-width:960px)
+	.boton__buscar
+		display none
+		
+	.busqueda
+		bottom 0
+		display inline-block !important
+		height auto !important
+		opacity 1 !important
+		right 0
+		visibility visible !important

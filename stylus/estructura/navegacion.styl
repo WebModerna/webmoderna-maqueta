@@ -1,8 +1,14 @@
 // Estilos de la barra de navegación principal
 .navegacion__barra
-	display none
+	// display none
+	height 0
 	margin 0
+	opacity 0
 	padding 0
+	position relative
+	transition(all 0.3s ease-in-out)
+	visibility hidden
+	z-index 9871
 	
 	li
 		border-top 1px solid gris_suave
@@ -17,7 +23,6 @@
 			text-transform uppercase
 			text-shadow_lindo()
 			transition(all 0.3s ease-in-out)
-			z-index 2
 			&:after
 				background naranja_suave
 				content ""
@@ -27,36 +32,62 @@
 				top 0
 				transition(all 0.3s ease-in-out)
 				width 0
-				z-index -1
+				z-index -2
+			&:before
+				background naranja_suave
+				content ""
+				height 100%
+				position absolute
+				left 0
+				top 0
+				transition(all 0.3s ease-in-out)
+				width 0
+				z-index -2
 			&:hover
 			&:focus
 				color blanco
 				&:after
-					width 100%
+					width 50%
+				&:before
+					width 50%
 					
 		&:first-child
 			border-top none
 			
-	
+.navegacion__barra--abrir
+	height auto
+	opacity 1	
+	visibility visible
+.navegacion__barra--cerrar
+	height 0
+	opacity 0
+	visibility hidden
+
 // Estilos para el botón del menú
 .boton__menu
 	display inline-block
 	position absolute
-	right 0
-	top 0
+	right 0.3em
+	top 0.3em
 	a
+		border-radius 0.2em
 		color gris_suave
 		display block
 		font-size 2em
-		padding 0.2em
+		// padding 0.2em
+		padding 0
 		text-decoration none
+		img
+			display block
+			width 45px
 		&:hover
 			color blanco
 			
 
 .boton__menu--rotar
 	a
-		color rosa_suave
+		// color rosa_suave
+		background rosa_suave
 		transform(rotate(90deg))
 		&:hover
 			color rosa_suave
@@ -71,8 +102,11 @@
 		right 0
 		top 0
 		
-	.navegacion__barra
+	.navegacion__barra 
 		display block
+		height auto
+		opacity 1
+		visibility visible
 		li
 			border-top none
 			display inline-block

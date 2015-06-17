@@ -1,11 +1,22 @@
 // Estilos del Logotipo principal de la web
 .logotipo--movil
 	width 45px
-	img
-		width 100%
+	a
+		img
+			width 100%
+		&:hover
+			img
+				animation rotador180deg 0.9s cubic-bezier(0.64, -0.37, 0.46, 1.55)
 		
 .logotipo--tablet
 	display none
 	
-
-// animation rotador 0.9s cubic-bezier(0.64, -0.37, 0.46, 1.55)
+@media all and (min-width:960px)
+	.logotipo--movil
+		display none
+		
+	.logotipo--tablet
+		display inline-block
+		width 300px
+		img
+			width 100%

@@ -1,0 +1,86 @@
+.contacto
+	background-color gris_suave
+	background-image url('../img/contact-bg.jpg')
+	-ms-filter unquote("progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/post_bg.jpg', sizingMethod='scale')")
+	background-position center center
+	background-repeat no-repeat
+	background-attachment fixed
+	// -webkit-background-clip text
+	background-size(cover)
+	-khtml-background-size cover   /*  Konqueror */
+	
+.contacto__header--titulo
+	color blanco
+	&:after
+		border-color blanco
+	
+.contacto__contenido
+	display block
+	display flex
+	flex-flow row wrap
+	justify-content space-around
+	// text-align center
+	// margin 1em auto
+
+.contacto__contenido__formulario
+.contacto__contenido__mapa
+	display inline-block
+	text-align left
+	vertical-align top
+	width 95%
+
+.contacto__contenido__formulario
+	margin-bottom 1em
+	padding 0.3em
+	input
+	textarea
+		border 1px solid gris_suave
+		border-radius 5px
+		box-sizing()
+		display block
+		float none
+		font-family 'MankSansMedium', helvetica, arial
+		font-size 16px
+		font-size 1rem
+		margin 0 0 1em 0
+		padding 1em
+		width 100%
+		&:hover
+		&:focus
+			box-shadow 0px 0px 8px 2px verde_azulado
+
+.contacto__contenido__formulario__botones
+	display inline-block
+	display flex
+	flex-flow row wrap
+	justify-content flex-end
+	button
+		align-self flex-end
+		margin-left 1em
+
+.contacto__contenido__mapa
+	margin-bottom 1em
+	padding 0.3em
+	iframe
+		border 1px solid gris_suave
+		display block
+		border-radius 5px
+		margin 0
+		padding 0
+
+.contacto__contenido__direccion
+	ul
+		color blanco
+		font-family 'MankSansMedium', helvetica, arial
+		font-size 16px
+		font-size 1rem
+		
+@media all and (min-width:460px)
+	.contacto__contenido__formulario
+	.contacto__contenido__mapa
+		width 80%
+	
+@media all and (min-width:960px)
+	.contacto__contenido__formulario
+	.contacto__contenido__mapa
+		width 45%

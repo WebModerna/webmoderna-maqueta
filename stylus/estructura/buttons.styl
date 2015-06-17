@@ -1,5 +1,5 @@
-/* ---- Buttons ---- */
-button{
+/* ---- .btns ---- */
+.btn{
 	display:inline-block;*display:inline;
 	padding:7px 20px;
 	margin-bottom:10px;*margin-left:.3em;
@@ -23,16 +23,17 @@ button{
 	background-image: -moz-linear-gradient(top, #f9f9f9, #efefef);  
 	background-image: -webkit-linear-gradient(top, #f9f9f9, #efefef);
 	filter unquote("progid:DXImageTransform.Microsoft.gradient(startColorStr='#f9f9f9', EndColorStr='#efefef')");
+	text-shadow_lindo()
 }
-button:hover, button:active{
+.btn:hover, .btn:active{
 	background:#eee;
 	background:-webkit-gradient(linear, left top, left bottom, from(#eee), to(#f8f8f8));
 	background:-moz-linear-gradient(top, #eee, #f8f8f8);
 }
-button.large{padding:10px 35px; font-size:15px;}
-button.small{padding:3px 13px; font-size:13px;}
+.btn.large{padding:10px 35px; font-size:15px;}
+.btn.small{padding:3px 13px; font-size:13px;}
 
-button.skyblue{ /* --- skyblue color button --- */
+.btn.skyblue{ /* --- skyblue color .btn --- */
 	color:#fff !important;
 	background-color:#26a2b6;
 	background: linear-gradient(#34bac9, #26a2b6);
@@ -43,13 +44,13 @@ button.skyblue{ /* --- skyblue color button --- */
 	background: -webkit-gradient(linear, left top, left bottom, from(#34bac9), to(#26a2b6));
 	filter unquote("progid:DXImageTransform.Microsoft.gradient(startColorStr='#34bac9', EndColorStr='#26a2b6')");
 }
-button.skyblue:hover, button.skyblue:active{
+.btn.skyblue:hover, .btn.skyblue:active{
 	background:#26a2b6;
 	background:-moz-linear-gradient(top, #26a2b6, #34bac9);
 	background:-webkit-gradient(linear, left top, left bottom, from(#26a2b6), to(#34bac9));
 }
 
-button.blue{ /* --- blue color button --- */
+.btn.blue{ /* --- blue color .btn --- */
 	color:#fff !important;
 	background-color:#0085c6;
 	background: linear-gradient(#008fd5, #0085c6);
@@ -60,13 +61,13 @@ button.blue{ /* --- blue color button --- */
 	background: -webkit-gradient(linear, left top, left bottom, from(#008fd5), to(#0085c6));
 	filter unquote("progid:DXImageTransform.Microsoft.gradient(startColorStr='#008fd5', EndColorStr='#0085c6')");
 }
-button.blue:hover, button.blue:active{
+.btn.blue:hover, .btn.blue:active{
 	background:#008fd5;
 	background:-moz-linear-gradient(top, #008fd5, #009de9);
 	background:-webkit-gradient(linear, left top, left bottom, from(#008fd5), to(#009de9));
 }
 
-button.green{ /* --- green color button --- */
+.btn.green{ /* --- green color .btn --- */
 	color:#fff !important;
 	background-color: #51A351;
 	background: linear-gradient(#62C462, #51A351);
@@ -77,13 +78,13 @@ button.green{ /* --- green color button --- */
 	background: -webkit-gradient(linear, left top, left bottom, from(#62C462), to(#51A351));
 	filter unquote("progid:DXImageTransform.Microsoft.gradient(startColorStr='#51A351', EndColorStr='#51A351')");
 }
-button.green:hover, button.green:active{
+.btn.green:hover, .btn.green:active{
 	background: #51A351;
 	background: -moz-linear-gradient(top, #51A351, #5FA351);
 	background: -webkit-gradient(linear, left top, left bottom, from(#51A351), to(#5FA351));
 }
 
-button.yellow{ /* --- yellow color button --- */
+.btn.yellow{ /* --- yellow color .btn --- */
 	color:#fff !important;
 	background-color:#f0bf4a;
 	background: linear-gradient(#f0c930, #f0bf4a);
@@ -94,13 +95,13 @@ button.yellow{ /* --- yellow color button --- */
 	background: -webkit-gradient(linear, left top, left bottom, from(#f0c930), to(#f0bf4a));
 	filter unquote("progid:DXImageTransform.Microsoft.gradient(startColorStr='#f0c930', EndColorStr='#f0bf4a')");
 }
-button.yellow:hover, button.yellow:active{
+.btn.yellow:hover, .btn.yellow:active{
 	background:#f0bf4a;
 	background:-moz-linear-gradient(top, #f0bf4a, #f0c930);
 	background:-webkit-gradient(linear, left top, left bottom, from(#f0bf4a), to(#f0c930));
 }
 
-button.orange{ /* --- orange color button --- */
+.btn.orange{ /* --- orange color .btn --- */
 	color:#fff !important;
 	background-color:#ff5c00;
 	background: linear-gradient(#ff6f40, #ff5c00);
@@ -111,13 +112,13 @@ button.orange{ /* --- orange color button --- */
 	background: -webkit-gradient(linear, left top, left bottom, from(#ff6f40), to(#ff5c00));
 	filter unquote("progid:DXImageTransform.Microsoft.gradient(startColorStr='#ff6f40', EndColorStr='#ff5c00')");
 }
-button.orange:hover, button.orange:active{
+.btn.orange:hover, .btn.orange:active{
 	background:#ff5c00;
 	background:-moz-linear-gradient(top, #ff5c00, #ff6f40);
 	background:-webkit-gradient(linear, left top, left bottom, from(#ff5c00), to(#ff6f40));
 }
 
-button.red{ /* --- red color button --- */
+.btn.red{ /* --- red color .btn --- */
 	color:#fff !important;
 	background-color:#bd362f;
 	background: linear-gradient(#bd362f, #b1322c);
@@ -128,13 +129,13 @@ button.red{ /* --- red color button --- */
 	background: -webkit-gradient(linear, left top, left bottom, from(#bd362f), to(#b1322c));
 	filter unquote("progid:DXImageTransform.Microsoft.gradient(startColorStr='#bd362f', EndColorStr='#b1322c')");
 }
-button.red:hover, button.red:active{
+.btn.red:hover, .btn.red:active{
   background:#bd362f;
   background:-webkit-gradient(linear, left top, left bottom, from(#bd362f), to(#cc3b34));
   background:-moz-linear-gradient(top, #bd362f, #cc3b34);
 }
 
-button.magenta{	/* --- magenta color button --- */
+.btn.magenta{	/* --- magenta color .btn --- */
 	color:#fff !important;
 	background-color:#b9298f;
 	background: linear-gradient(#b93180, #b9298f);
@@ -145,13 +146,13 @@ button.magenta{	/* --- magenta color button --- */
 	background: -webkit-gradient(linear, left top, left bottom, from(#b93180), to(#b9298f));
 	filter unquote("progid:DXImageTransform.Microsoft.gradient(startColorStr='#b9298f', EndColorStr='#b9298f')");
 }
-button.magenta:hover, button.magenta:active{
+.btn.magenta:hover, .btn.magenta:active{
 	background:#b9298f;
 	background:-moz-linear-gradient(top, #b9298f, #b9358f);
 	background:-webkit-gradient(linear, left top, left bottom, from(#b9298f), to(#b9358f));
 }
 
-button.black{ /* --- black color button --- */
+.btn.black{ /* --- black color .btn --- */
 	color:#fff !important;
 	background-color:#111;
 	background: linear-gradient(#333, #111);
@@ -162,8 +163,14 @@ button.black{ /* --- black color button --- */
 	background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#111));
 	filter unquote("progid:DXImageTransform.Microsoft.gradient(startColorStr='#333', EndColorStr='#111')");
 }
-button.black:hover, button.black:active{
+.btn.black:hover, .btn.black:active{
 	background:#222;
 	background:-moz-linear-gradient(top, #222, #333);
 	background:-webkit-gradient(linear, left top, left bottom, from(#222), to(#333));
 }
+
+.vermas
+	text-decoration none
+	text-shadow_lindo()
+// 	&:after
+// 		content " + "
