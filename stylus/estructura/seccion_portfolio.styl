@@ -94,38 +94,43 @@
 			margin 0
 			padding 0
 		
-.portfolio__header--breadcrum
+.breadcrum
+	margin 0
 	text-align center
-	align-self flex-start
-	margin 0.3em 0 0 1em
 	ul
 		margin 0
 		padding 0
-		li
-			color gris_suave
-			display inline-block
-			margin 0.2em 0.1em
-			font-family 'MankSans'
-			text-transform uppercase
-			&:before
-				content " / "
-			a
-				color gris_suave
-				padding 0.3em 0.5em
-				text-decoration none
-				&:hover
-				&:focus
-					text-decoration underline
-				
-			&:first-child
-				&:before
-					content ""
 
-.portfolio__header--breadcrum__item--activo
+.breadcrum__listado__item
+	color gris_suave
+	display inline-block
+	margin 0.2em 0.1em
+	font-family 'MankSans'
+	text-transform uppercase
+	&:before
+		content " / "
 	a
-		color verde_azulado !important
-		font-weight bold
-		// text-shadow_lindo()
+		color gris_suave
+		display inline-block
+		padding 0.3em 0.5em
+		text-decoration none
+		&:hover
+		&:focus
+			text-decoration underline
+		
+	&:first-child
+		&:before
+			content ""
+
+.breadcrum__listado__item--activo
+	background negro
+	border-radius 0.3em
+	color blanco !important
+	text-shadow_lindo()
+	text-decoration none
+	&:focus
+	&:hover
+		text-decoration none !important
 
 
 @media all and (min-width:320px)
@@ -133,6 +138,10 @@
 		width 300px
 		
 @media all and (min-width:620px)
+	.breadcrum
+		align-self flex-start
+		margin 0.3em 0 0 1em
+		
 	.portfolio__header
 		display block
 		display flex

@@ -1,2 +1,62 @@
 .servicios
-	display none
+	padding-bottom 2em
+.acordeon
+	border 1px solid gris_suave
+	border-radius 0.5em
+	margin-left auto
+	margin-right auto
+	max-width 500px
+	overflow hidden
+	
+.acordeon__header__titulo
+	background #f9f9f9
+	background -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f9f9), color-stop(100%,#eaeaea))
+	background linear-gradient(to bottom, #f9f9f9 0%, #eaeaea 100%)
+	border-bottom 1px solid #aaa
+	color #595959
+	cursor pointer
+	filter unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#eaeaea',GradientType=0 )")
+	// font-family 'Open Sans', Arial, Helvetica, Sans-serif, Verdana, Tahoma
+	font-size 1em
+	font-weight bold
+	margin 0
+	padding 0.5em 1em
+	text-transform none
+	transition(all 0.25s ease)
+	i
+		display inline-block
+		margin-right 1em
+	
+	&:after
+		content "+"
+		float right
+		height 25px
+		padding 0
+		text-align center
+		text-shadow 0px 0px 1px blanco
+		transition(all 0.3s ease-in-out)
+		width 25px
+		
+.acordeon__header__titulo--abierto
+	color rosa_suave
+	transition(all 0.3s ease-in-out)
+	&:after
+		content "−"
+		transform rotate(360deg)
+		
+
+.acordeon__contenido
+	overflow hidden
+	padding 1em
+	
+.acordeon__contenido__imagen
+	border 1px solid gris_suave
+	border-radius 0.5em
+	float right
+	margin 0 0 1em 1em
+	max-width 150px
+	overflow hidden
+	img
+		border-radius 0.5em
+		display block
+		width 100%

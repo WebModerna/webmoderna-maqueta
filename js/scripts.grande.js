@@ -17297,3 +17297,102 @@ JWPlayerVideo.prototype.replay = function() {
 		};
 	};
 }());
+
+
+// Los breadcrums. Selección de items
+(function()
+{
+	$(document).on("ready", observar);
+	function observar(ev)
+	{
+		ev.preventDefault();
+		$('.breadcrum__listado__item a').on("click", seleccionar);
+		
+
+		// Cuantos items hay en total incluido el llamado "Todos"?
+		var Listado_filtros = document.querySelectorAll('.breadcrum__listado__item a[data-filtro]');
+		console.log("Total de etiquetas: " + Listado_filtros.length);
+		console.log("Etiqueta seleccionada: " + Listado_filtros[4].innerText);
+
+
+		function seleccionar(ev)
+		{
+			ev.preventDefault();
+			$('[data-primero] a').removeClass('breadcrum__listado__item--activo');
+			$(this).addClass('breadcrum__listado__item--activo');
+			$(this).off("click", seleccionar);
+			$(this).on("click", des_seleccionar);
+
+			// Ahora, cuántos hay seleccionados?
+			var total_seleccionados = $('.breadcrum__listado__item--activo').length;
+			console.log("Etiquetas seleccionadas: " + total_seleccionados);
+
+			
+			function des_seleccionar(ev)
+			{
+				ev.preventDefault();
+				$(this).removeClass('breadcrum__listado__item--activo');
+				$(this).off("click", des_seleccionar);
+				$(this).on("click", seleccionar);	
+			}
+
+			if ( total_seleccionados < Listado_filtros[0].innerText)
+			{
+				alert("llegué acá");
+				$('.breadcrum__listado__item a').removeClass('.breadcrum__listado__item--activo')
+				$('[data-primero] a').addClass('.breadcrum__listado__item--activo');
+			}
+		}
+
+	}
+}());
+
+// Acordeon
+/*(function()
+{
+	$(document).on("ready", acordeon);
+	function acordeon()
+	{
+		$('.acordeon__header__titulo').on("click", abridor);
+		function abridor(ev)
+		{
+			ev.preventDefault();
+			$('.acordeon__header__titulo')addClass('acordeon__header__titulo--abierto');
+			$('.')
+		}
+	}
+}());*/
+(function()
+{
+	$('.acordeon__contenido').not('.acordeon__header__titulo').hide();
+	$('.acordeon__header__titulo').click(function()
+	{
+		if ($(this).hasClass('acordeon__header__titulo--abierto'))
+		{
+			$(this).removeClass('acordeon__header__titulo--abierto');
+			$(this).next().slideUp();
+		}
+		else
+		{
+			$('.acordeon__header__titulo').removeClass('acordeon__header__titulo--abierto');
+			$(this).addClass('acordeon__header__titulo--abierto');
+			$('.acordeon__contenido').slideUp();
+			$(this).next().slideDown();
+		}
+	});
+}());
+
+/*$(".acordeon__header__titulo").click(function(){
+		
+   var contenido=$(this).next(".accordion-content");
+			
+   if(contenido.css("display")=="none"){ //open		
+      contenido.slideDown(250);			
+      $(this).addClass("open");
+   }
+   else{ //close		
+      contenido.slideUp(250);
+      $(this).removeClass("open");	
+  }
+							
+});*/
