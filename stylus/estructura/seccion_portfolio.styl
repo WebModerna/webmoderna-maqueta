@@ -24,8 +24,10 @@
 	background blanco
 	display inline-block
 	list-style none
-	text-align center
+	border-radius 0.5em
 	margin 1em 0
+	overflow hidden
+	text-align center
 		
 .porftolio__contenedor__listado__figure
 	display block
@@ -36,16 +38,17 @@
 	a
 		display block
 		margin 0 0 1em 0
-		overflow hidden
 		padding 0
+		overflow hidden
 		position relative
 		text-decoration none
 		transition(all 0.3s ease-in-out)
 		width 100%
 		img
+			border-radius 0.5em 0.5em 0 0
 			display block
 			position relative
-			transition(all 0.3s ease-in-out)
+			transition(all 0.3s ease-in-out 0.3s)
 			width 100%
 			
 		&:after
@@ -58,11 +61,11 @@
 			opacity 0
 			position absolute
 			top 30%
-			transition(all 0.3s ease-in-out)
+			transition(all 0.3s ease-in-out 0.2s)
 			text-shadow_lindo()
 			text-align center
 			visibility hidden
-			width 100%
+			width 0
 			z-index 4
 
 		&:before
@@ -84,8 +87,9 @@
 			&:after
 				opacity 1
 				visibility visible
+				width 100%
 			img
-				transform( scale(1.3) unquote(" ") rotate(10deg))
+				transform( scale(1.3) unquote(" ") rotate(8deg))
 
 	figcaption
 		display block

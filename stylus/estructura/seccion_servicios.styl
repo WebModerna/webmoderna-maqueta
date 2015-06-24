@@ -1,5 +1,13 @@
 .servicios
+	background url("../img/servicios_bg.png") top left repeat-x
+	background-size(cover)
 	padding-bottom 2em
+
+.servicios__header--titulo
+	color blanco
+	&:after
+		border-color blanco
+	
 .acordeon
 	border 1px solid gris_suave
 	border-radius 0.5em
@@ -13,6 +21,7 @@
 	background -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f9f9), color-stop(100%,#eaeaea))
 	background linear-gradient(to bottom, #f9f9f9 0%, #eaeaea 100%)
 	border-bottom 1px solid #aaa
+	border-top 1px solid #aaa
 	color #595959
 	cursor pointer
 	filter unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#eaeaea',GradientType=0 )")
@@ -46,6 +55,7 @@
 		
 
 .acordeon__contenido
+	background blanco
 	overflow hidden
 	padding 1em
 	
@@ -53,7 +63,7 @@
 	border 1px solid gris_suave
 	border-radius 0.5em
 	float right
-	margin 0 0 1em 1em
+	margin 1em 0 1em 1em
 	max-width 150px
 	overflow hidden
 	img
